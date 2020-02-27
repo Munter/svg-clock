@@ -11,12 +11,25 @@
     body {
       margin: 0;
     }
+
+    body {
+      background-color: #eee;
+      color: black;
+    }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>An SVG clock</h1>
+  </header>
 
-  <div id="app"></div>
+  <main id="app"></main>
+
+  <footer>Made by <a href="https://github.com/Munter/">Peter Müller</a> to experiment with <a
+      href="https://www.snowpack.dev/">Snowpack</a>, <a href="https://preactjs.com/">Preact</a> and <a
+      href="https://www.npmjs.com/package/htm">htm</a>
+    with zero build tooling. <a href="https://github.com/Munter/svg-clock">Fork me!</a></footer>
 
   <script type="module" src="init.js"></script>
 </body>
