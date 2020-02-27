@@ -45,7 +45,7 @@ function app() {
             checked=${isLive}
             onChange=${e => setIsLive(e.target.checked)}
           />
-          Realtime updates
+          <span>Realtime updates</span>
         </label>
 
         <label>
@@ -54,7 +54,7 @@ function app() {
             checked=${usesFluidRotation}
             onChange=${e => setFluidRotation(e.target.checked)}
           />
-          Fluid hand movement
+          <span>Fluid hand movement</span>
         </label>
 
         <label>
@@ -63,48 +63,54 @@ function app() {
             checked=${showSecondsHand}
             onChange=${e => setShowSecondsHand(e.target.checked)}
           />
-          Show seconds hand
+          <span>Show seconds hand</span>
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>Manual time settings (chaning stops realtime updates)</legend>
+        <legend>Manual time settings (pause)</legend>
 
-        <label>
-          <p>Hour: ${time.getHours()}</p>
-          <input
-            type="range"
-            min="0"
-            max="23"
-            step="1"
-            onInput=${set.bind(null, 'hours')}
-            value=${time.getHours()}
-          />
-        </label>
+        <div class="timegrid">
+          <label>
+            <span>Hour:</span>
+            <span>${time.getHours()}</span>
+            <input
+              aria-label="hours"
+              type="range"
+              min="0"
+              max="23"
+              step="1"
+              onInput=${set.bind(null, 'hours')}
+              value=${time.getHours()}
+            />
+          </label>
 
-        <label>
-          <p>Minute: ${time.getMinutes()}</p>
-          <input
-            type="range"
-            min="0"
-            max="59"
-            step="1"
-            onInput=${set.bind(null, 'minutes')}
-            value=${time.getMinutes()}
-          />
-        </label>
+          <label>
+            <span>Minute:</span>
+            <span>${time.getMinutes()}</span>
+            <input
+              type="range"
+              min="0"
+              max="59"
+              step="1"
+              onInput=${set.bind(null, 'minutes')}
+              value=${time.getMinutes()}
+            />
+          </label>
 
-        <label>
-          <p>Second: ${time.getSeconds()}</p>
-          <input
-            type="range"
-            min="0"
-            max="59"
-            step="1"
-            onInput=${set.bind(null, 'seconds')}
-            value=${time.getSeconds()}
-          />
-        </label>
+          <label>
+            <span>Second:</span>
+            <span>${time.getSeconds()}</span>
+            <input
+              type="range"
+              min="0"
+              max="59"
+              step="1"
+              onInput=${set.bind(null, 'seconds')}
+              value=${time.getSeconds()}
+            />
+          </label>
+        </div>
       </fieldset>
     </form>
   `;

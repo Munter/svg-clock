@@ -7,14 +7,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    html,
-    body {
-      margin: 0;
-    }
-
     body {
       background-color: #eee;
       color: black;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #app {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 40px auto;
+    }
+
+    form {
+      white-space: nowrap;
+      padding: 20px;
+    }
+
+    fieldset+fieldset {
+      margin-top: 20px;
+    }
+
+    label {
+      display: flex;
+    }
+
+    label+label {
+      margin-top: 10px;
+    }
+
+    label>*+* {
+      margin-left: 10px;
+    }
+
+    .timegrid span {
+      flex: 1;
+      text-align: right;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 80%;
+    }
+
+    svg {
+      max-width: 80vw;
+      min-width: 280px;
+      display: block;
     }
   </style>
 </head>
