@@ -8,6 +8,7 @@ function app() {
   const [time, setTime] = useState(new Date());
   const [usesFluidRotation, setFluidRotation] = useState(true);
   const [isLive, setIsLive] = useState(true);
+  const [showSecondsHand, setShowSecondsHand] = useState(true);
 
   useAnimationFrame(function() {
     if (isLive) {
@@ -28,7 +29,7 @@ function app() {
 
   return html`
     <${Clock}
-      showSeconds
+      showSeconds=${showSecondsHand}
       fluid=${usesFluidRotation}
       dateTime=${time}
       style="width: 512pt"
@@ -54,6 +55,15 @@ function app() {
             onChange=${e => setFluidRotation(e.target.checked)}
           />
           Fluid hand movement
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked=${showSecondsHand}
+            onChange=${e => setShowSecondsHand(e.target.checked)}
+          />
+          Show seconds hand
         </label>
       </fieldset>
 
