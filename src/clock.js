@@ -32,12 +32,6 @@ function clock({
       stroke="currentColor"
       stroke-linecap="round"
     >
-      <style>
-        g {
-          // transition: transform 1s;
-        }
-      </style>
-
       <circle
         cx="50"
         cy="50"
