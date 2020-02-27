@@ -1,0 +1,28 @@
+{
+  "name": "svg-clock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint .",
+    "prepare": "snowpack",
+    "build": "snowpack --optimize",
+    "start": "servor src --reload --browse"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-compat": "^3.5.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "htm": "^3.0.3",
+    "prettier": "^1.19.1",
+    "servor": "^3.2.0",
+    "snowpack": "^1.5.0"
+  },
+  "dependencies": {
+    "preact": "^10.3.2"
+  }
+}

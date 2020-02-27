@@ -1,0 +1,6 @@
+{
+  "installOptions": {
+    "dest": "src/web_modules",
+    "include": "src/**/*.{js,jsx,ts,tsx}"
+  }
+}
